@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for girl in girls %}
+        <li>{{ girl }}</li>
+    {% endfor %}
+</ul>
+
+<hr>
+
+<ul>
+    {% for girl in girls %}
+        {% if girl | length >= 3 %}
+            <li class="a">{{ girl }}</li>
+        {% else %}
+            <li>{{ girl }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+</body>
+</html>
